@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6e6;
+    overflow: hidden;
+    position: relative;
+}
+
+.heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.heart {
+    font-size: 100px; /* বড় ❤️ ইমোজির জন্য সাইজ */
+    z-index: 1;
+}
+
+button {
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+button:hover {
+    background-color: #ffcccc;
+}
+
+@keyframes fallingHearts {
+    from {
+        top: -10%;
+    }
+    to {
+        top: 110%;
+    }
+}
+
+.falling-heart {
+    position: absolute;
+    font-size: 50px; /* পতিত হওয়া ❤️ ইমোজির সাইজ */
+    animation: fallingHearts 5s linear infinite;
+    opacity: 0.7;
+}
